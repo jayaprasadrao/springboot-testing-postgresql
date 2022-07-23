@@ -26,7 +26,7 @@ public class CustomerService {
      * @param customer customer
      */
     public void addCustomer(Customer customer) {
-        Boolean existsEmail =
+        boolean existsEmail =
                 customerRepository.selectExistsEmail(customer.getEmail());
         if (existsEmail) {
             throw new BadRequestException(

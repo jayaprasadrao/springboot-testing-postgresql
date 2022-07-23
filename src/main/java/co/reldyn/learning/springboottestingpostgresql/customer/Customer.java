@@ -23,8 +23,8 @@ import javax.validation.constraints.NotNull;
 @TypeDef(name = "jsonb", typeClass = JsonBinaryType.class)
 public class Customer {
     @Id
-    @SequenceGenerator(name = "customer_sequence", sequenceName = "customer_sequence", allocationSize = 1)
-    @GeneratedValue(generator = "customer_sequence", strategy = GenerationType.SEQUENCE)
+    @SequenceGenerator(name = "customers_sequence", sequenceName = "customers_sequence", allocationSize = 1)
+    @GeneratedValue(generator = "customers_sequence", strategy = GenerationType.SEQUENCE)
     private Long id;
 
     @NotBlank

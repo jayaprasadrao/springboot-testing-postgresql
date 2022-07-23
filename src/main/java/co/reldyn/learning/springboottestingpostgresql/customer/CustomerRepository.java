@@ -12,5 +12,5 @@ public interface CustomerRepository extends JpaRepository<Customer, Long> {
             "FROM Customer c " +
             "WHERE c.email = ?1"
     )
-    Boolean selectExistsEmail(String email);
+    boolean selectExistsEmail(String email);
 }

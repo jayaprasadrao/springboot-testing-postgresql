@@ -2,14 +2,19 @@ spring:
   datasource:
     driver-class-name: org.postgresql.Driver
     username: prasad
-    url: jdbc:postgresql://localhost:5432/demodb
+    url: jdbc:postgresql://localhost:5432/testing_db_01_test
   jpa:
     show-sql: true
     hibernate:
-      ddl-auto: update
+      ddl-auto: validate
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
 
-
+#  flyway:
+#    enabled: true
+#    url: ${spring.datasource.url}
+#    user: ${spring.datasource.username}
+#    password: ${spring.datasource.username}
+#    schemas: public
