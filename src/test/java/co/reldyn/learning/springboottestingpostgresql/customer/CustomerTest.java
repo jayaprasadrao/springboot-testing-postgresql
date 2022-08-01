@@ -43,6 +43,11 @@ class CustomerTest {
         assertThat(Objects.requireNonNull(violations.stream().findFirst().orElse(null)).getPropertyPath()).hasToString("name");
     }
 
+
+    /**
+     * Helper function to check violations of on the given object
+     * @param customer customer
+     */
     Set<ConstraintViolation<Customer>> getViolations(Customer customer) {
         Validator validator;
         try (ValidatorFactory factory = buildDefaultValidatorFactory()) {
